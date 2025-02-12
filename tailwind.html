@@ -1,32 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Tailwind | Stats preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Cuadrados en pantalla</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
-<body>
-
-  Get insights that help your business grow.
-
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
-
-  10k+ companies
-  314 templates
-  12m+ queries
-
-  <div class="attribution">
-    Coded by <a href="#">Your Name Here</a>.
+<body class="h-screen flex justify-center items-center" style="background-color:hsl(233, 47%, 7%)">
+  <div class="relative w-4/5 bg-purple-900 rounded-sm flex" style="background-color: hsl(244, 38%, 16%)">
+    <!-- Sección de texto -->
+    <div class="w-1/2 p-11 text-white">
+      <h1 class="text-2xl font-bold mb-4 mt-6 ml-6" style="font-family: 'Inter'; font-weight: 700; font-size: 250%;">
+        Get <span class="text-[hsl(277,64%,61%)]">insights</span> that help<br>your business grow.
+      </h1>
+      <p class="w-3xl leading-7.5 mt-7" style="color: rgba(255, 255, 255, 0.601); font-family: 'Inter'; font-weight: 400; transform: translateX(25px);">
+        Discover the benefits of data analytics and make <br> better decisions regarding revenue, customer <br> experience, and overall efficiency.
+      </p>
+      <!-- Sección de texto "datos numéricos" -->
+      <div class="mt-16 ml-7 flex text-white font-bold" style="font-family:'Inter'; font-size: x-large;">
+        <h1 style="font-size: x-large;">
+          10K+
+        </h1>
+        <h1 class="ml-24 mr-24">
+          314
+        </h1>
+        <h1>
+          12M+
+        </h1>
+      </div>
+      <!-- Sección de texto "datos texto" -->
+      <div class="ml-7 flex" style="font-family:'Inter'; font-size: medium; color: hsla(0, 0%, 100%, 0.5);">
+        <p>
+          COMPANIES
+        </p>
+        <p class="ml-14 mr-12">
+          TEMPLATES
+        </p>
+        <p>
+          QUERIS
+        </p>
+      </div>
+    </div>
+    <!-- Sección de imagen con superposición -->
+    <div class="relative w-1/2">
+      <img src="./images/image-header-desktop.jpg" class="rounded-br-sm rounded-tr-sm w-full h-full object-cover" alt="Image-1">
+      <div class="absolute inset-0 bg-purple-950 opacity-50 rounded-br-sm rounded-tr-sm"></div>
+    </div>
   </div>
 </body>
 </html>
