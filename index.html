@@ -1,113 +1,80 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Cuadrados en pantalla</title>
+  <title>Document</title>
   <style>
+    html, body {
+      overflow: hidden; /* Deshabilita el scroll */
+      height: 100%;
+    }
     body {
+      font-family: 'Inter', sans-serif;
+      color: white;
       background-color: hsl(233, 47%, 7%);
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
+      text-align: center;
     }
-    .container-custom {
+    .card {
+      width: 800px;
       background-color: hsl(244, 38%, 16%);
-      border-radius: 5px;
-      overflow: hidden;
+      border-radius: 0.25cm;
+      padding: 1cm;
+      font-size: xx-large;
+    }
+    .links {
+      margin-top: 20px;
       display: flex;
-      width: 75%;
-      height: 60vh;
+      flex-direction: column;
+      align-items: center;
     }
-    .highlight {
-      color: hsl(277, 64%, 61%);
-    }
-    .text-muted-custom {
-      color: rgba(255, 255, 255, 0.601);
-    }
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: hsla(277, 100%, 10%, 0.5);
-    }
-    .image-container {
-      position: relative;
-      width: 50%;
-      height: 100%;
+    .link-item {
       display: flex;
       align-items: center;
-      justify-content: center;
-      overflow: hidden;
+      font-size: xx-large;
+      margin: 10px 0;
+      text-decoration: none;
+      color: white;
+    }
+    .link-item img {
+      width: 35px; /* Tamaño del logo */
+      height: 30px;
+      margin-right: 10px; /* Espacio entre el logo y el texto */
+    }
+    .image-container {
+      margin-top: 20px;
     }
     .image-container img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .text-section {
-      width: 50%;
-      color: white;
-      padding: 40px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .text-section h1 {
-      font-size: 2.5rem;
-      font-family: 'Inter', sans-serif;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .text-section p {
-      font-family: 'Inter', sans-serif;
-      font-weight: 400;
-      margin-bottom: 20px;
-    }
-    .stats {
-      display: flex;
-      gap: 40px;
-      margin-top: 40px;
-    }
-    .stats h1 {
-      font-family: 'Inter', sans-serif;
-      font-size: 1.85rem;
-      font-weight: bold;
-    }
-    .stats-text {
-      display: flex;
-      gap: 40px;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
+      max-width: 100%;
+      border-radius: 10px;
     }
   </style>
 </head>
 <body>
-  <div class="container-custom">
-    <div class="text-section">
-      <h1>Get <span class="highlight">insights</span> that help<br>your business grow.</h1>
-      <p class="text-muted-custom">
-        Discover the benefits of data analytics and make <br> better decisions regarding revenue, customer <br> experience, and overall efficiency.
-      </p>
-      <div class="stats">
-        <h1>10K+</h1>
-        <h1>314</h1>
-        <h1>12M+</h1>
-      </div>
-      <div class="stats-text text-muted-custom">
-        <p>COMPANIES</p>
-        <p>TEMPLATES</p>
-        <p>QUERIES</p>
-      </div>
-    </div>
+  <div class="card">
+    <div style="scale: 125%; margin-bottom: 1%;">Welcome to our presentation card</div>
+    <span style="font-size: 0.6cm;">Please choose a <span style="color: blueviolet;">framework</span> to watch our card:</span>
+    
+    <div class="links">
+      <a href="tailwind.html" class="link-item">
+        <img src="https://codekitapp.com/images/help/free-tailwind-icon@2x.png" alt="Tailwind Logo">
+        <span>Go to <span style="color: blueviolet;">Tailwind</span> Page</span>
+      </a>
+      <a href="bootstrap.html" class="link-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/800px-Bootstrap_logo.svg.png" alt="Bootstrap Logo">
+        <span>Go to <span style="color: blueviolet;">Bootstrap</span> Page</span>
+      </a>
+    </div> 
+    
     <div class="image-container">
-      <img src="./images/image-header-desktop.jpg" alt="Image-1">
-      <div class="overlay"></div>
+      <img style="margin-bottom:-0.4cm;" src="./design/desktop-design.jpg" alt="Desktop">
+      <span style="font-size: large;">Preview</span>
     </div>
   </div>
 </body>
